@@ -4,6 +4,7 @@ document.addEventListener( 'DOMContentLoaded', function (event) {
 	prefix = document.getElementById('prefix').value;
 	suffix = document.getElementById('suffix').value;
 	length = parseInt( document.getElementById('length').value );
+	var tooltip = new bootstrap.Tooltip(document.getElementById( 'copy' ));
 
 	document.getElementById( 'generate' ).addEventListener( 'click', function (e) {
 		generate();
@@ -31,6 +32,12 @@ document.addEventListener( 'DOMContentLoaded', function (event) {
 	document.getElementById( 'copy' ).addEventListener( 'click', function (e) {
 		document.getElementById( 'result' ).select();
 		document.execCommand( 'copy' );
+
+		tooltip.show();
+
+		setTimeout(() => {
+			tooltip.hide();
+		}, 2000);
 	});
 });
 
