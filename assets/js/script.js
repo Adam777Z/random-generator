@@ -4,7 +4,11 @@ document.addEventListener( 'DOMContentLoaded', function (event) {
 	prefix = document.getElementById('prefix').value;
 	suffix = document.getElementById('suffix').value;
 	length = parseInt( document.getElementById('length').value );
-	var tooltip = new bootstrap.Tooltip(document.getElementById( 'copy' ));
+	var tooltip = new bootstrap.Tooltip(document.getElementById( 'copy' ), {
+		'placement': 'top',
+		'trigger': 'manual',
+		'title': 'Copied'
+	});
 
 	document.getElementById( 'generate' ).addEventListener( 'click', function (e) {
 		generate();
