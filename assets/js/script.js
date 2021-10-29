@@ -1,3 +1,7 @@
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js');
+}
+
 var prefix = '', suffix = '', length = 8, random = '', result;
 
 document.addEventListener( 'DOMContentLoaded', (event) => {
