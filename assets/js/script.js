@@ -40,8 +40,8 @@ document.addEventListener( 'DOMContentLoaded', (event) => {
 		generate();
 	});
 
-	['input', 'change'].forEach( (event) => {
-		result.addEventListener( event, (event2) => {
+	['input', 'change'].forEach( (type) => {
+		result.addEventListener( type, (event2) => {
 			copy_btn.disabled = event2.target.value === '';
 		});
 	});
