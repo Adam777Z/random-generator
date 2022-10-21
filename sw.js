@@ -1,5 +1,5 @@
 const cacheName = 'random-generator-cache';
-const cacheVersion = '1.0.1'; // Needed for service worker auto update
+const cacheVersion = '1.0.2'; // Needed for service worker auto update
 
 self.addEventListener('install', (event) => {
 	event.waitUntil(
