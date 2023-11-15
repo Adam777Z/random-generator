@@ -62,6 +62,7 @@ document.addEventListener( 'DOMContentLoaded', (event) => {
 
 function update() {
 	result.value = prefix + random + suffix;
+	result.dispatchEvent( new Event( 'change' ) );
 }
 
 function generate() {
